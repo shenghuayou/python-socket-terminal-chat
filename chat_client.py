@@ -12,6 +12,7 @@ username = input('username:')
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))
 
+# recv function keep running on thread
 def recv():
     while 1:
         data = s.recv(BUFFER_SIZE)
@@ -20,9 +21,10 @@ def recv():
 
 Thread(target=recv).start()
 
+# user will keep doing input
 while 1:
 	input_message = input('')
-	MESSAGE = ('%s:%s' % (username,input_message))
+	MESSAGE = ('%s: %s' % (username,input_message))
 	s.send(MESSAGE.encode('utf-8'))
 	
 
