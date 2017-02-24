@@ -9,5 +9,5 @@
 * Fill your info in this line db = **pymysql.connect("host","user","pass","db")** on your **chat_server.py**
 * create "history" table on Mysql use this command **create table history (message VARCHAR(100));**
 
-
-
+## A demo of chat_client_aws.py
+![](https://github.com/shenghuayou/python-socket-terminal-chat/blob/master/chat.gif)
